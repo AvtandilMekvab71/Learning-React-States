@@ -1,12 +1,12 @@
 import {useState} from 'react'
 
 export default function LoginStatus(){
-    const [isLoggedIn] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     return(
         <div>
-            <button onClick = {isLoggedIn((bool) => !bool)}>Toggle</button>
-            {isLoggedIn ? <h1>You are logged in!</h1> : <h1>You are logged out</h1>}
-        </div> 
+            <button onClick = {() => setIsLoggedIn(prev => !prev)}>{isLoggedIn ? 'logout' : 'login'}</button>
+            {isLoggedIn ? <h2>The user is logged in.</h2> : <h2>The user is not logged in.</h2>}
+        </div>
     )
 }

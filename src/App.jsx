@@ -1,9 +1,7 @@
-import Clicker from './Clicker.jsx'
+import ShoppingList from './ShoppingList.jsx'
 
 export default function App(){
     return(
-        <>
-            <Clicker/>
-        </>
+        <ShoppingList/>
     )
 }

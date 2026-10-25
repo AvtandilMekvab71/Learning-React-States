@@ -1,19 +1,15 @@
-export default function StudentList(){
-    const students = [
-        {name: 'Marty', id: 101},
-        {name: 'Edward', id: 102},
-        {name: 'Charlie', id: 103},
-        {name: 'Paul', id: 104}
-    ]
-     
 
+export default function Student({
+    name = "John Doe",
+    age = "32",
+    condition = true
+}){
     return(
-        <div>
-            <ul>
-                {students.map((student) => (
-                    <li key = {student.id}>{student.name}</li>
-                ))}
-            </ul>
+        <div className  = 'card'>
+            <p>Hello, I'm {name}!</p>
+            <p>I am {age} years old.</p>
+            <p>My logic is {condition ? "True" : "False"}.</p>
         </div>
     )
 }
+
